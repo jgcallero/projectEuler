@@ -20,4 +20,6 @@ def recCycle(n):
 
 def cycleCount(p):
     num = str(Decimal(1) / Decimal(p))
+    regex = re.compile(r"(?=(.+)\1)")
+    
 
