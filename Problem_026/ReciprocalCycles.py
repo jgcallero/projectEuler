@@ -5,8 +5,7 @@
 # Reciprocal Cycles, given the number n. Figure out which fraction
 #  1/n has the longest repeating decimal
 
-import re
-import decimal
+
 
 def recCycle(n):
     maxRepeat = 1
@@ -19,7 +18,7 @@ def recCycle(n):
     return(maxNumber, maxRepeat)
 
 def cycleCount(p):
-    num = str(Decimal(1) / Decimal(p))
-    regex = re.compile(r"(?=(.+)\1)")
-    
-
+    for t in range(1, p):
+        if 1 == 10**t % p:
+            return t
+    return 0
